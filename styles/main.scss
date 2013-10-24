@@ -43,6 +43,11 @@ aside{
 	top: 0;
 	width: 150px;
 	z-index: 5000;
+	-webkit-transition: all 100ms;
+	   -moz-transition: all 100ms;
+	    -ms-transition: all 100ms;
+	     -o-transition: all 100ms;
+	     	transition: all 100ms;
 	&.visible{
 		right: 0;
 	}
