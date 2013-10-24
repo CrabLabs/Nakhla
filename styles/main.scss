@@ -1,0 +1,212 @@
+@import "normalize-scss/normalize";
+@import "_variables.scss";
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
+
+html, body{
+	background: $Blanco;
+	display: block;
+	height: 100%;
+	margin: 0;
+	min-height: 100%;
+	overflow-x: hidden;
+	padding: 0;
+}
+p, a, li, span, h1, h2, h3, h4, h5, h6, input, textarea{
+	color: $Gris;
+	font-family: $open;
+}
+p, a, li, span{
+	font-size: 0.8em;
+	font-weight: $regular;
+	line-height:1.5em;
+}
+h1, h2, h3{
+	font-weight: $light;
+}
+h4, h5, h6{
+	font-weight: $bold;
+}
+h1{font-size: 0%;}
+h2{font-size: 2.8em;line-height:2.5em;border-bottom:1px solid $Humo}
+h3{font-size: 2em;line-height:2.2em;}
+h4{font-size: 2em;line-height:2.2em;}
+h5{font-size: 1.5em;line-height:2em;}
+h6{font-size: 1.2em;font-style: italic;line-height:1.8em;}
+
+aside{
+	background: $Humo;
+	display: block;
+	height: 100%;
+	position: fixed;
+	right: -150px;
+	top: 0;
+	width: 150px;
+	z-index: 5000;
+	&.visible{
+		right: 0;
+	}
+	span{
+		color: $Humo;
+		font-size: 30px;
+		position: absolute;
+		left: -22px;
+		top: 20px;
+		-webkit-transition: all 100ms;
+		   -moz-transition: all 100ms;
+		    -ms-transition: all 100ms;
+		     -o-transition: all 100ms;
+		     	transition: all 100ms;
+		&:hover{
+			color: $Gris;
+			cursor: pointer;
+		}
+		&.giro{
+			-webkit-transform: rotate(180deg);
+			   -moz-transform: rotate(180deg);
+			    -ms-transform: rotate(180deg);
+			     -o-transform: rotate(180deg);
+			     	transform: rotate(180deg);
+		}
+	}
+	ul{
+		list-style: none;
+		padding-left: 30px;
+
+		li{
+			display: block;
+			padding: 10px 0;
+			text-align: left;
+			&:hover, &.active{
+				background: $Gris;
+				a{
+					color: $Blanco;
+				}
+			}
+			a{
+				color: $Gris;
+				display: block;
+				font-size: 1.5em;
+				font-weight: 300;
+				line-height: 1em;
+				text-decoration: none;
+			}
+		}
+	}
+}
+section{
+	display: block;
+	min-height: 100%;
+	position: relative;
+	width: 100%;
+	&#home{
+		background-size: cover;
+		h1{
+			background-image: url(../img/logo.png);
+			background-image: url(../img/logo.svg), url(../img/logo.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			display: inline-block;
+			height: 150px;
+			left: 20px;
+			position: relative;
+			top: 0;
+			width: 110px;
+		}
+	}
+	&#about{
+		div{
+			display: block;
+			margin: 0 auto;
+			padding: 20px;
+			width: 760px;
+		}
+	}
+	&#history{
+		background: $Humo;
+	}
+	&#contact{
+		min-height: 80%;
+		div{
+			display: block;
+			height: 100%;
+			margin: 0 auto;
+			padding: 20px;
+			position: relative;
+			width: 760px;
+			article{
+				display: inline-block;
+				width: 360px;
+			}
+			form{
+				display: inline-block;
+				right: 0;
+				position: absolute;
+				width: 360px;
+				input, textarea{
+					background: $Humo;
+					border: none;
+					display: block;
+					font-style: italic;
+					font-weight: 300;
+					margin: 10px 0;
+					padding: 8px 10px;
+					width: 300px;
+				}
+				textarea{
+					height: 80px;
+					resize: none;
+				}
+				input#enviar{
+					background: $Oscuro;
+					color: $Blanco;
+					font-style: normal;
+					font-weight: $bold;
+					position: absolute;
+					right: 40px;
+					width: auto;
+				}
+			}
+		}
+	}
+}
+footer{
+	background: $Oscuro;
+	color: $Humo;
+	display: block;
+	font-size: 0.6em;
+	font-weight: $light;
+	min-height: 20%;
+	padding: 20px;
+	text-align: center;
+	width: 100%;
+	a{
+		border-bottom: 1px dotted $Gris;
+		color: $Humo;
+		text-decoration: none;
+	}
+}
+
+/*InvertScroll*/
+.scroll
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.horizon
+{
+  z-index: 1;
+  width: 3000px;
+}
+.middle
+{
+  z-index: 500;
+  width: 4000px;
+}
+.front
+{
+  z-index: 1000;
+  width: 6000px;
+}
+/*			*/
