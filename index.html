@@ -10,11 +10,16 @@
         <meta name="description" content="Nakhla Tabacos Uruguayc">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
         <script src="components/modernizr/modernizr.js"></script>
 
     </head>
     <body>
+    <!--[if lt IE 7]>
+          <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
         <aside class="nav">
             <span>◄ menu</span>
             <ul>
@@ -67,13 +72,13 @@
             </div>
         </section>
         <footer>
-            © 2013 Nakhla, UY - diseño & desarrollo <a href="http://crab.uy">crab</a>
+            © 2013 Nakhla, UY - diseño &amp; desarrollo <a href="http://crab.uy">crab</a>
         </footer>
-                             
-        <!--[if lt IE 7]>
-          <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="components/jquery/jquery.min.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
@@ -81,20 +86,8 @@
             g.src='//www.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
-
-        <script src="components/jquery/jquery.min.js"></script>
+        <!-- build:js scripts/main.js -->
         <script src="js/main.js"></script>
-        <script>
-            window.onload = choosePic;
-
-            var myPix = new Array("img/bg/img_1.jpg", "img/bg/img_2.jpg");
-
-            function choosePic() {
-                var randomNum = Math.floor((Math.random() * myPix.length));
-                document.getElementById("home").style.backgroundImage =
-                    "url(" + myPix[randomNum] + ")";
-            }
-        </script>
         <!-- endbuild -->
 </body>
 </html>

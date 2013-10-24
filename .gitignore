@@ -1,2 +1,5 @@
-
-*.scssc
+.sass-cache/
+.tmp
+bower_components/
+components/
+node_modules/
