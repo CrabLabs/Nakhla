@@ -19,12 +19,6 @@
 		});
 	});
 
-	$(".nav h4").on("click", function (e) {
-		e.preventDefault();
-		$(".nav").toggleClass("visible");
-		$(".nav h4").toggleClass("giro");
-	});
-
 	$("a[href*=#]").on("click", function (e) {
 		if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
 			var targetOffset, 
@@ -40,6 +34,33 @@
 				// return false;
 			}
 		}
+	});
+
+	var win = $(window),
+	    doc = $(document),
+	    bodyH = doc.height() - win.height(),
+	    three = $('#three');
+
+	win.scrollTop(bodyH);
+
+	$("#history").on('DOMMouseScroll mousewheel', function(e, delta) {
+	    delta = delta || -e.originalEvent.detail / 3 || e.originalEvent.wheelDelta / 120;
+
+	    if(delta < 0) {
+	        if(win.scrollLeft() > three.offset().right && win.scrollTop() !== 0) {
+	            win.scrollTop(win.scrollTop() + delta * 30);
+	        } else {
+	            win.scrollLeft(win.scrollLeft() - delta * 30);
+	        }
+	    } else {
+	        if(win.scrollLeft() < three.offset().right && (win.scrollTop() > 0 || win.scrollTop() === 0) && win.scrollTop() !== bodyH) {
+	            win.scrollTop(win.scrollTop() + delta * 30);
+	        } else {
+	            win.scrollLeft(win.scrollLeft() - delta * 30);
+	        }
+	    }
+
+	    e.preventDefault();
 	});
 
 }(jQuery));

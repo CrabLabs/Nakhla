@@ -9,7 +9,7 @@ html, body{
 	height: 100%;
 	margin: 0;
 	min-height: 100%;
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
 	padding: 0;
 }
 p, a, li, span, h1, h2, h3, h4, h5, h6, input, textarea{
@@ -34,78 +34,79 @@ h4{font-size: 2em;line-height:2.2em;}
 h5{font-size: 1.5em;line-height:2em;}
 h6{font-size: 1.2em;font-style: italic;line-height:1.8em;}
 
-aside{
-	background: $Humo;
-	display: block;
-	height: 100%;
-	position: fixed;
-	right: -150px;
-	top: 0;
-	width: 150px;
-	z-index: 5000;
-	-webkit-transition: all 100ms;
-	   -moz-transition: all 100ms;
-	    -ms-transition: all 100ms;
-	     -o-transition: all 100ms;
-	     	transition: all 100ms;
-	&.visible{
-		right: 0;
-	}
-	h4{
-		color: $Humo;
-		font-size: 18px;
-		font-weight: 400;
-		left: -100px;
-		line-height: 30px;
-		top: 20px;
-		position: absolute;
-		-webkit-transition: all 100ms;
-		   -moz-transition: all 100ms;
-		    -ms-transition: all 100ms;
-		     -o-transition: all 100ms;
-		     	transition: all 100ms;
-		&:hover{
-			cursor: pointer;
-		}
-		&.giro{
-			opacity: 0;
-			-webkit-transform: rotate(180deg);
-			   -moz-transform: rotate(180deg);
-			    -ms-transform: rotate(180deg);
-			     -o-transform: rotate(180deg);
-			     	transform: rotate(180deg);
-			span{
-				opacity: 1;
-			}
-		}
-		span{
-			color: $Humo;
-			font-size: 18px;
-			line-height: 30px;
-		}
-	}
-	ul{
-		list-style: none;
-		padding-left: 30px;
+input:focus, textarea:focus {outline: 1px solid #e0e0e0;}
 
-		li{
-			display: block;
-			padding: 10px 0;
-			text-align: left;
-			&:hover, &.active{
-				background: $Gris;
+header{
+	background: #222;
+	display: block;
+	height: 40px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 5000;
+	-webkit-transition: all 250ms;
+	   -moz-transition: all 250ms;
+	    -ms-transition: all 250ms;
+	     -o-transition: all 250ms;
+	     	transition: all 250ms;
+	div.nav{
+		display: block;
+		height: 100%;
+		margin: 0 auto;
+		width: 400px;
+		ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			li{
+				display: inline-block;
+				padding: 0 10px;
+				text-align: center;
+				&:hover, &.active{
+					a{
+						color: $Humo;
+					}
+				}
 				a{
-					color: $Blanco;
+					color: $Gris;
+					display: block;
+					font-size: 1em;
+					font-weight: 300;
+					line-height: 40px;
+					text-decoration: none;
 				}
 			}
-			a{
-				color: $Gris;
-				display: block;
-				font-size: 1.5em;
-				font-weight: 300;
-				line-height: 1em;
-				text-decoration: none;
-			}
+		}
+	}
+	a#logo{
+		text-decoration: none;
+		display: inline-block;
+		height: 40px;
+		left: 30px;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		span{
+			background-image: url(../img/logo.png);
+			background-image: url(../img/logo.svg), url(../img/logo.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			display: inline-block;
+			height: 60px;
+			position: absolute;
+			top: -10px;
+			width: 42px;
+		}
+		h2{
+			border: 0;
+			color: $Humo;
+			font-size: 18px;
+			font-weight: 400;
+			left: 60px;
+			line-height: 40px;
+			position: relative;
+			top: -15px;
 		}
 	}
 }
@@ -116,18 +117,6 @@ section{
 	width: 100%;
 	&#home{
 		background-size: cover;
-		h1{
-			background-image: url(../img/logo.png);
-			background-image: url(../img/logo.svg), url(../img/logo.png);
-			background-repeat: no-repeat;
-			background-size: cover;
-			display: inline-block;
-			height: 150px;
-			left: 20px;
-			position: relative;
-			top: 0;
-			width: 110px;
-		}
 	}
 	&#about{
 		div{
@@ -139,6 +128,39 @@ section{
 	}
 	&#history{
 		background: $Humo;
+		height: 100%;
+		width: 100%;
+		aside{
+			position: absolute;
+			ul{
+				list-style: none;
+				li{
+					a{
+						font-size: 3em;
+						line-height: 1em;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+		div.step{
+			background: red;
+    		border: 1px solid #fff;
+			display: block;
+			height: 100%;
+			position: absolute;
+			width: 100%;
+			&.one{left:0; top: 0;}
+			&.two{left:0; top:100%;}
+			&.three{left:0; top:200%;}
+			&.nine{left:0; top:300%;}
+			&.ten{left:0; top:400%;}
+			&.four{left:100%; top: 200%;}
+			&.five{left:200%; top:200%;}
+			&.six{left:300%; top:200%;}
+			&.seven{left:400%; top:200%;}
+			&.eight{left:500%; top:200%;}
+		}
 	}
 	&#contact{
 		min-height: 80%;
@@ -201,27 +223,3 @@ footer{
 		text-decoration: none;
 	}
 }
-
-/*InvertScroll*/
-.scroll
-{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-.horizon
-{
-  z-index: 1;
-  width: 3000px;
-}
-.middle
-{
-  z-index: 500;
-  width: 4000px;
-}
-.front
-{
-  z-index: 1000;
-  width: 6000px;
-}
-/*			*/
