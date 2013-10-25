@@ -51,27 +51,37 @@ aside{
 	&.visible{
 		right: 0;
 	}
-	span{
+	h4{
 		color: $Humo;
-		font-size: 30px;
-		position: absolute;
-		left: -22px;
+		font-size: 18px;
+		font-weight: 400;
+		left: -100px;
+		line-height: 30px;
 		top: 20px;
+		position: absolute;
 		-webkit-transition: all 100ms;
 		   -moz-transition: all 100ms;
 		    -ms-transition: all 100ms;
 		     -o-transition: all 100ms;
 		     	transition: all 100ms;
 		&:hover{
-			color: $Gris;
 			cursor: pointer;
 		}
 		&.giro{
+			opacity: 0;
 			-webkit-transform: rotate(180deg);
 			   -moz-transform: rotate(180deg);
 			    -ms-transform: rotate(180deg);
 			     -o-transform: rotate(180deg);
 			     	transform: rotate(180deg);
+			span{
+				opacity: 1;
+			}
+		}
+		span{
+			color: $Humo;
+			font-size: 18px;
+			line-height: 30px;
 		}
 	}
 	ul{

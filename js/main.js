@@ -19,10 +19,10 @@
 		});
 	});
 
-	$(".nav span").on("click", function (e) {
+	$(".nav h4").on("click", function (e) {
 		e.preventDefault();
 		$(".nav").toggleClass("visible");
-		$(".nav span").toggleClass("giro");
+		$(".nav h4").toggleClass("giro");
 	});
 
 	$("a[href*=#]").on("click", function (e) {
