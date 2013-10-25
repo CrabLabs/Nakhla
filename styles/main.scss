@@ -79,31 +79,20 @@ header{
 			}
 		}
 	}
-	a#logo{
+	a#name{
 		text-decoration: none;
 		display: inline-block;
 		height: 40px;
-		left: 30px;
+		left: 60px;
 		margin: 0;
 		padding: 0;
 		position: absolute;
-		span{
-			background-image: url(../img/logo.png);
-			background-image: url(../img/logo.svg), url(../img/logo.png);
-			background-repeat: no-repeat;
-			background-size: cover;
-			display: inline-block;
-			height: 60px;
-			position: absolute;
-			top: -10px;
-			width: 42px;
-		}
 		h2{
 			border: 0;
 			color: $Humo;
 			font-size: 18px;
 			font-weight: 400;
-			left: 60px;
+			left: 0;
 			line-height: 40px;
 			position: relative;
 			top: -15px;
@@ -117,6 +106,32 @@ section{
 	width: 100%;
 	&#home{
 		background-size: cover;
+		h1{
+			background-image: url(../img/logo.png);
+			background-image: url(../img/logo.svg), url(../img/logo.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			display: inline-block;
+			height: 130px;
+			left: 70px;
+			opacity: 1;
+			position: fixed;
+			top: 50px;
+			width: 90px;
+			-webkit-transition: all 200ms;
+			   -moz-transition: all 200ms;
+			    -ms-transition: all 200ms;
+			     -o-transition: all 200ms;
+			     	transition: all 200ms;
+			&.hide{
+				-webkit-transform: scale(0.5);
+				   -moz-transform: scale(0.5);
+				    -ms-transform: scale(0.5);
+				     -o-transform: scale(0.5);
+				     	transform: scale(0.5);
+				opacity: 0;
+			}
+		}
 	}
 	&#about{
 		div{
@@ -128,10 +143,12 @@ section{
 	}
 	&#history{
 		background: $Humo;
-		height: 100%;
+		height: 500%;
 		width: 100%;
 		aside{
+			right: 100px;
 			position: absolute;
+			top: 200px;
 			ul{
 				list-style: none;
 				li{
@@ -147,19 +164,24 @@ section{
 			background: red;
     		border: 1px solid #fff;
 			display: block;
-			height: 100%;
+			height: -webkit-calc(100% / 5);
+			height: 		calc(100% / 5);
 			position: absolute;
-			width: 100%;
+			width: 50%;
 			&.one{left:0; top: 0;}
-			&.two{left:0; top:100%;}
-			&.three{left:0; top:200%;}
-			&.nine{left:0; top:300%;}
-			&.ten{left:0; top:400%;}
-			&.four{left:100%; top: 200%;}
-			&.five{left:200%; top:200%;}
-			&.six{left:300%; top:200%;}
-			&.seven{left:400%; top:200%;}
-			&.eight{left:500%; top:200%;}
+			&.two{left:0; top:20%;}
+			&.nine{left:0; top:60%;}
+			&.ten{left:0; top:80%;}
+			&.three{right:0; top:40%;}
+			&.four{right:100%; top: 40%;}
+			&.five{right:200%; top:40%;}
+			&.six{right:300%; top:40%;}
+			&.seven{right:400%; top:40%;}
+			&.eight{right:500%; top:40%;}
+
+			&.horizontal{
+				position: fixed;
+			}
 		}
 	}
 	&#contact{
