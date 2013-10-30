@@ -9,7 +9,7 @@ html, body{
 	height: 100%;
 	margin: 0;
 	min-height: 100%;
-	/*overflow-x: hidden;*/
+	overflow-x: hidden;
 	padding: 0;
 }
 p, a, li, span, h1, h2, h3, h4, h5, h6, input, textarea{
@@ -139,11 +139,27 @@ section{
 			margin: 0 auto;
 			padding: 20px;
 			width: 760px;
+			p{
+				position: relative;
+				width: 100%;
+				span{
+					display: block;
+					font-size: 1em;
+					width: 540px;
+				}
+				img{
+					display: block;
+					height: 200px;
+					position: absolute;
+					right: 0;
+					width: 200px;
+				}
+			}
 		}
 	}
 	&#history{
 		background: $Humo;
-		height: 500%;
+		height: 1000%;
 		width: 100%;
 		aside{
 			right: 100px;
@@ -164,24 +180,24 @@ section{
 			background: red;
     		border: 1px solid #fff;
 			display: block;
-			height: -webkit-calc(100% / 5);
-			height: 		calc(100% / 5);
+			height: -webkit-calc(100% / 10);
+			height:    -moz-calc(100% / 10);
+			height:     -ms-calc(100% / 10);
+			height: 	 -o-calc(100% / 10);
+			height: 		calc(100% / 10);
 			position: absolute;
-			width: 50%;
+			width: 100%;
 			&.one{left:0; top: 0;}
-			&.two{left:0; top:20%;}
-			&.nine{left:0; top:60%;}
-			&.ten{left:0; top:80%;}
-			&.three{right:0; top:40%;}
-			&.four{right:100%; top: 40%;}
-			&.five{right:200%; top:40%;}
-			&.six{right:300%; top:40%;}
-			&.seven{right:400%; top:40%;}
-			&.eight{right:500%; top:40%;}
+			&.two{left:0; top:10%;}
+			&.nine{left:0; top:80%;}
+			&.ten{left:0; top:90%;}
 
-			&.horizontal{
-				position: fixed;
-			}
+			&.three{right:0; top:20%;}
+			&.four{right:100%; top:20%;}
+			&.five{right:200%; top:20%;}
+			&.six{right:300%; top:20%;}
+			&.seven{right:400%; top:20%;}
+			&.eight{right:500%; top:20%;}
 		}
 	}
 	&#contact{

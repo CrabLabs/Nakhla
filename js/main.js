@@ -2,7 +2,7 @@
 	"use strict";
 	
 	$(document).on("ready", function () {
-		var bgImgs = ["img/bg/img_1.jpg", "img/bg/img_2.jpg", "img/bg/img_3.jpg"];
+		var bgImgs = ["img/bg/img_1.jpg", "img/bg/img_2.jpg", "img/bg/img_3.jpg", "img/bg/imagen08.jpg"];
 		$("#home").css("background-image", "url(" + bgImgs[Math.floor(Math.random() * bgImgs.length)] + ")");
 	});
 
@@ -34,30 +34,6 @@
 				// return false;
 			}
 		}
-	});
-
-	$(document).on("scroll", function (event) {
-		var scrollTop = $(document).scrollTop(),
-			scrollMod = scrollTop / ($(document).height() - 80) * 4;
-
-		$(".step").each(function (event) {
-
-		    var $horizontal = $(".horizontal");
-
-		    $(window).scroll(function () {
-		        var s = $(this).scrollTop(),
-		            d = $(document).height(),
-		            c = $(this).height();
-
-		        scrollPercent = (s / (d - c));
-
-		        var position = (scrollPercent * ($(document).width() ));
-		        
-		        $horizontal.css({
-		            "right": position
-		        });
-		    });
-		});
 	});
 
 	var logo = false;
