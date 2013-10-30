@@ -2,7 +2,7 @@
 	"use strict";
 	
 	$(document).on("ready", function () {
-		var bgImgs = ["img/bg/img_1.jpg", "img/bg/img_2.jpg", "img/bg/img_3.jpg", "img/bg/imagen08.jpg"];
+		var bgImgs = ["img/bg/img_1.jpg", "img/bg/img_2.jpg", "img/bg/img_3.jpg"];
 		$("#home").css("background-image", "url(" + bgImgs[Math.floor(Math.random() * bgImgs.length)] + ")");
 	});
 
