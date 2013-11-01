@@ -1,0 +1,24 @@
+#about{
+	div{
+		display: block;
+		margin: 0 auto;
+		padding: 20px;
+		width: 760px;
+		p{
+			position: relative;
+			width: 100%;
+			span{
+				display: block;
+				font-size: 1em;
+				width: 540px;
+			}
+			img{
+				display: block;
+				height: 200px;
+				position: absolute;
+				right: 0;
+				width: 200px;
+			}
+		}
+	}
+}

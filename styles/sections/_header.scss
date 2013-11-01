@@ -1,0 +1,63 @@
+header{
+	background: #222;
+	display: block;
+	height: 40px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	-webkit-transition: all 250ms;
+	   -moz-transition: all 250ms;
+	    -ms-transition: all 250ms;
+	     -o-transition: all 250ms;
+	     	transition: all 250ms;
+	div.nav{
+		display: block;
+		height: 100%;
+		margin: 0 auto;
+		width: 400px;
+		ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			li{
+				display: inline-block;
+				padding: 0 10px;
+				text-align: center;
+				&:hover, &.active{
+					a{
+						color: $Humo;
+					}
+				}
+				a{
+					color: $Gris;
+					display: block;
+					font-size: 1em;
+					font-weight: 300;
+					line-height: 40px;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	a#name{
+		text-decoration: none;
+		display: inline-block;
+		height: 40px;
+		left: 60px;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		h2{
+			border: 0;
+			color: $Humo;
+			font-size: 18px;
+			font-weight: 400;
+			left: 0;
+			line-height: 40px;
+			position: relative;
+			top: -15px;
+		}
+	}
+}

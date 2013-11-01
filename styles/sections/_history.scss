@@ -1,0 +1,21 @@
+#history{
+	// height: 100%;
+	#nav-step{
+		display: none;
+	}
+	.step{
+		background: #FF33FF;
+		display: block;
+		// height: 10%;
+		width: 100%;
+	}
+	.horizontal_steps{
+		// height: 600%;
+		width: 600%;
+		.horizontal{
+			display: inline-block;
+			// height: 100%;
+			width: 16.6666%;
+		}
+	}
+}

@@ -1,0 +1,44 @@
+#contact{
+	min-height: 80%;
+	div{
+		display: block;
+		height: 100%;
+		margin: 0 auto;
+		padding: 20px;
+		position: relative;
+		width: 760px;
+		article{
+			display: inline-block;
+			width: 360px;
+		}
+		form{
+			display: inline-block;
+			right: 0;
+			position: absolute;
+			width: 360px;
+			input, textarea{
+				background: $Humo;
+				border: none;
+				display: block;
+				font-style: italic;
+				font-weight: 300;
+				margin: 10px 0;
+				padding: 8px 10px;
+				width: 300px;
+			}
+			textarea{
+				height: 80px;
+				resize: none;
+			}
+			input#enviar{
+				background: $Oscuro;
+				color: $Blanco;
+				font-style: normal;
+				font-weight: $bold;
+				position: absolute;
+				right: 40px;
+				width: auto;
+			}
+		}
+	}
+}

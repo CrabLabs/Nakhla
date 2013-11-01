@@ -1,0 +1,29 @@
+#home{
+	background-size: cover;
+	h1{
+		background-image: url(../img/logo.png);
+		background-image: url(../img/logo.svg), url(../img/logo.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		display: inline-block;
+		height: 130px;
+		left: 70px;
+		opacity: 1;
+		position: fixed;
+		top: 50px;
+		width: 90px;
+		// -webkit-transition: all 200ms;
+		//    -moz-transition: all 200ms;
+		//     -ms-transition: all 200ms;
+		//      -o-transition: all 200ms;
+		     	transition: all 200ms;
+		&.hide{
+			// -webkit-transform: scale(0.5);
+			//    -moz-transform: scale(0.5);
+			//     -ms-transform: scale(0.5);
+			//      -o-transform: scale(0.5);
+			     	transform: scale(0.5);
+			opacity: 0;
+		}
+	}
+}

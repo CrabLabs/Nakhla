@@ -1,0 +1,17 @@
+footer{
+	background: $Oscuro;
+	box-sizing: border-box;
+	color: $Humo;
+	display: block;
+	font-size: 0.6em;
+	font-weight: $light;
+	min-height: 20%;
+	padding: 20px;
+	text-align: center;
+	width: 100%;
+	a{
+		border-bottom: 1px dotted $Gris;
+		color: $Humo;
+		text-decoration: none;
+	}
+}
