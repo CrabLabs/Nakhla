@@ -11,7 +11,7 @@
 	$(document, window).on("ready resize", function () {
 		windowHeight = $(window).height();
 		$(".step").height(windowHeight);
-		$(".horizontal_steps").css("margin-bottom", windowHeight * 6 + "px");
+		$(".horizontal_steps").height($(window).width() * 6);
 	});
 
 	$(document).on("scroll", function (event) {
@@ -26,19 +26,30 @@
 		// 	}
 		// });
 
-		if (scrollTop > 300)
+		if (scrollTop > 300) {
 			$("#logo").addClass("hide");
-		else
-			$("#logo").removeClass("hide");
-
-		// console.log(scrollTop);
-		if (scrollTop > windowHeight * 4 && scrollTop < windowHeight * 11) {
-			$(".horizontal_steps .horizontal_placeholder").css({
-				"left": "-" + (scrollTop - windowHeight * 4) + "px"
-			});
-			$(".horizontal_steps .horizontal_placeholder").css("position", "fixed");
 		} else {
-			$(".horizontal_steps .horizontal_placeholder").css("position", "static");
+			$("#logo").removeClass("hide");
+		}
+
+		if (scrollTop > windowHeight * 4 && scrollTop < windowHeight * 4 + $(window).width() * 5) {
+			$(".horizontal_steps .horizontal_placeholder").css({
+				"left": "-" + (scrollTop - windowHeight * 4) + "px",
+				"position": "fixed",
+				"top": "40px"
+			});
+		} else {
+			if (scrollTop > windowHeight * 4) {
+				$(".horizontal_steps .horizontal_placeholder").css({
+					"bottom": "0px",
+					"left": "auto",
+					"right": $(window).width() * 4 + "px",
+					"position": "absolute",
+					"top": "auto"
+				});
+			} else {
+				$(".horizontal_steps .horizontal_placeholder").css("position", "static");	
+			}
 		}
 
 	});
