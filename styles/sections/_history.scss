@@ -10,12 +10,23 @@
 		width: 100%;
 	}
 	.horizontal_steps{
-		// height: 600%;
+		position: relative;
 		width: 600%;
-		.horizontal{
-			display: inline-block;
-			// height: 100%;
-			width: 16.6666%;
+		.horizontal_placeholder{
+			position: static;
+			top: 40px;
+			width: 600%;
+			.horizontal{
+				display: inline-block;
+				position: relative;
+				width: 16.6666%;
+				&.three{
+					background-image: url('../img/history/step_3.jpg');
+				}
+				&.four{
+					background-image: url('../img/history/step_4.jpg');
+				}
+			}
 		}
 	}
 }
