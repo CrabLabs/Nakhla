@@ -4,10 +4,24 @@
 		display: none;
 	}
 	.step{
-		background: #FF33FF;
+		//background: #FF33FF;
+		background-position: center center;
+		background-size: cover;
 		display: block;
 		// height: 10%;
 		width: 100%;
+		&.one{
+			background-image: url('../img/history/nakhla_history_1.jpg')
+		}
+		&.two{
+			background-image: url('../img/history/nakhla_history_2.jpg')
+		}
+		&.nine{
+			background-image: url('../img/history/nakhla_history_9.jpg')
+		}
+		&.ten{
+			background-image: url('../img/history/nakhla_history_10.jpg')
+		}
 	}
 	.horizontal_steps{
 		position: relative;
@@ -21,10 +35,22 @@
 				position: relative;
 				width: 16.6666%;
 				&.three{
-					background-image: url('../img/history/step_3.jpg');
+					background-image: url('../img/history/nakhla_history_3.jpg')
 				}
 				&.four{
-					background-image: url('../img/history/step_4.jpg');
+					background-image: url('../img/history/nakhla_history_4.jpg')
+				}
+				&.five{
+					background-image: url('../img/history/nakhla_history_5.jpg')
+				}
+				&.six{
+					background-image: url('../img/history/nakhla_history_6.jpg')
+				}
+				&.seven{
+					background-image: url('../img/history/nakhla_history_7.jpg')
+				}
+				&.eight{
+					background-image: url('../img/history/nakhla_history_8.jpg')
 				}
 			}
 		}
