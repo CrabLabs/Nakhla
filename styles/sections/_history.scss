@@ -1,57 +1,29 @@
 #history{
-	// height: 100%;
-	#nav-step{
-		display: none;
-	}
-	.step{
-		//background: #FF33FF;
-		background-position: center center;
-		background-size: cover;
+	background: url(../img/history.jpg) no-repeat;
+	background-size: cover;
+	display: block;
+	height: 100%;
+	width: 100%;
+	#cont-history{
 		display: block;
-		// height: 10%;
-		width: 100%;
-		&.one{
-			background-image: url('../img/history/nakhla_history_1.jpg')
+		height: calc(100% - 200px);
+		padding: 100px;
+		h3{
+			span{
+				font-size: 1.5em;
+				font-weight: $light;
+			}
 		}
-		&.two{
-			background-image: url('../img/history/nakhla_history_2.jpg')
-		}
-		&.nine{
-			background-image: url('../img/history/nakhla_history_9.jpg')
-		}
-		&.ten{
-			background-image: url('../img/history/nakhla_history_10.jpg')
-		}
-	}
-	.horizontal_steps{
-		position: relative;
-		width: 600%;
-		.horizontal_placeholder{
-			position: static;
-			top: 40px;
-			width: 600%;
-			.horizontal{
-				display: inline-block;
-				position: relative;
-				width: 16.6666%;
-				&.three{
-					background-image: url('../img/history/nakhla_history_3.jpg')
-				}
-				&.four{
-					background-image: url('../img/history/nakhla_history_4.jpg')
-				}
-				&.five{
-					background-image: url('../img/history/nakhla_history_5.jpg')
-				}
-				&.six{
-					background-image: url('../img/history/nakhla_history_6.jpg')
-				}
-				&.seven{
-					background-image: url('../img/history/nakhla_history_7.jpg')
-				}
-				&.eight{
-					background-image: url('../img/history/nakhla_history_8.jpg')
-				}
+		a{
+			background: $Azul;
+			border-radius: 5px;
+			bottom: 100px;
+			color: $Blanco;
+			padding: 10px 15px;
+			position: absolute;
+			text-decoration: none;
+			&:hover{
+				box-shadow: 0 1px 5px #e0e0e0;
 			}
 		}
 	}

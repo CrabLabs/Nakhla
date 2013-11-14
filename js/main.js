@@ -4,15 +4,15 @@
 		bgImgs;
 
 	$(document).on("ready", function () {
-		bgImgs = ["img/bg/img_1.jpg", "img/bg/img_2.jpg", "img/bg/img_3.jpg"];
+		bgImgs = ["img/bg/01.jpg", "img/bg/02.jpg", "img/bg/03.jpg", "img/bg/04.jpg", "img/bg/05.jpg"];
 		$("#home").css("background-image", "url(" + bgImgs[Math.floor(Math.random() * bgImgs.length)] + ")");
 	});
 
-	$(document, window).on("ready resize", function () {
-		windowHeight = $(window).height();
-		$(".step").height(windowHeight);
-		$(".horizontal_steps").height($(window).width() * 6);
-	});
+	//$(document, window).on("ready resize", function () {
+	//	windowHeight = $(window).height();
+	//	$(".step").height(windowHeight);
+	//	$(".horizontal_steps").height($(window).width() * 6);
+	//});
 
 	$(document).on("scroll", function (event) {
 		var scrollTop = $(document).scrollTop(),
@@ -32,25 +32,25 @@
 			$("#logo").removeClass("hide");
 		}
 
-		if (scrollTop > windowHeight * 4 && scrollTop < windowHeight * 4 + $(window).width() * 5) {
-			$(".horizontal_steps .horizontal_placeholder").css({
-				"left": "-" + (scrollTop - windowHeight * 4) + "px",
-				"position": "fixed",
-				"top": "40px"
-			});
-		} else {
-			if (scrollTop > windowHeight * 4) {
-				$(".horizontal_steps .horizontal_placeholder").css({
-					"bottom": "0px",
-					"left": "auto",
-					"right": $(window).width() * 4 + "px",
-					"position": "absolute",
-					"top": "auto"
-				});
-			} else {
-				$(".horizontal_steps .horizontal_placeholder").css("position", "static");	
-			}
-		}
+		//if (scrollTop > windowHeight * 4 && scrollTop < windowHeight * 4 + $(window).width() * 5) {
+		//	$(".horizontal_steps .horizontal_placeholder").css({
+		//		"left": "-" + (scrollTop - windowHeight * 4) + "px",
+		//		"position": "fixed",
+		//		"top": "40px"
+		//	});
+		//} else {
+		//	if (scrollTop > windowHeight * 4) {
+		//		$(".horizontal_steps .horizontal_placeholder").css({
+		//			"bottom": "0px",
+		//			"left": "auto",
+		//			"right": $(window).width() * 4 + "px",
+		//			"position": "absolute",
+		//			"top": "auto"
+		//		});
+		//	} else {
+		//		$(".horizontal_steps .horizontal_placeholder").css("position", "static");	
+		//	}
+		//}
 
 	});
 
