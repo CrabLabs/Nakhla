@@ -1,0 +1,87 @@
+@import "normalize-scss/normalize";
+@import "variables.scss";
+@import "general";
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
+*{
+	box-sizing: border-box;
+}
+html, body{
+	height: 100%;
+}
+body{
+	background: #e0e0e0;
+	display: block;
+	margin: 0;
+	overflow-x: hidden;
+	padding: 40px 0 0 0;
+
+	.horizon{
+		background: url(../img/history/bg_2.svg);
+		background-size: cover;
+		height: 100%;
+	  	width: 700%;
+	  	z-index: 1;
+	}
+
+	.middle{
+		background: url(../img/history/bg_1.svg);
+		background-size: cover;
+		height: 100%;
+	  	width: 900%;
+	 	z-index: 50;
+	}
+
+	.front{
+		height: 100%;
+		width: 800%;
+		z-index: 100;
+		section{
+			/*box-shadow: inset 0 0 10px #f00;*/
+			display: inline-block;
+			height: 100%;
+			padding: 100px;
+			position: relative;
+			vertical-align: top;
+			width: calc(100% / 8);
+			div{
+				&.ll{
+					bottom: 100px;
+					left: 100px;
+					position: absolute;
+				}
+				&.ur{
+					position: absolute;
+					right: 100px;
+					top: 100px;
+				}
+			}
+			h3{
+				color: $Azul;
+				max-width: 45%;
+			}
+			p{
+				max-width: 45%;
+			}
+			img{
+				bottom: 100px;
+				position: absolute;
+				right: 100px;
+			}
+		}
+	}
+}
+footer{
+	bottom: 20px;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	z-index: 999;
+}
+
+.scroll{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+@import "sections/header";

@@ -4,7 +4,7 @@
 		bgImgs;
 
 	$(document).on("ready", function () {
-		bgImgs = ["img/bg/01.jpg", "img/bg/02.jpg", "img/bg/03.jpg", "img/bg/04.jpg", "img/bg/05.jpg"];
+		bgImgs = ["img/bg/01.jpg", "img/bg/02.jpg", "img/bg/04.jpg", "img/bg/05.jpg"];
 		$("#home").css("background-image", "url(" + bgImgs[Math.floor(Math.random() * bgImgs.length)] + ")");
 	});
 

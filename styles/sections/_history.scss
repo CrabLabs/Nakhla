@@ -8,6 +8,7 @@
 		display: block;
 		height: calc(100% - 200px);
 		padding: 100px;
+		position: relative;
 		h3{
 			span{
 				font-size: 1.5em;
@@ -25,6 +26,11 @@
 			&:hover{
 				box-shadow: 0 1px 5px #e0e0e0;
 			}
+		}
+		img{
+			bottom: 100px;
+			position: absolute;
+			right: 100px;
 		}
 	}
 }
