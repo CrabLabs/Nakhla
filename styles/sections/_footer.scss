@@ -5,13 +5,19 @@ footer{
 	display: block;
 	font-size: 0.6em;
 	font-weight: $light;
-	min-height: 20%;
+	min-height: 10%;
 	padding: 20px;
 	text-align: center;
 	width: 100%;
+
+	@media #{$mobile_mid}{
+		min-height: 10%;
+		padding: 20px 15px;
+	}
 	a{
 		border-bottom: 1px dotted $Gris;
 		color: $Humo;
+		font-size: 1em;
 		text-decoration: none;
 	}
 }

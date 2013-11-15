@@ -1,20 +1,52 @@
 #contact{
-	min-height: 80%;
+	min-height: 100%;
+	padding-bottom: 50px;
+
+	@media #{$mobile_big}{
+		padding-bottom: 20px;
+	}
 	div{
 		display: block;
 		margin: 0 auto;
 		padding: 20px;
 		position: relative;
 		width: 760px;
+		
+		@media #{$mobile_big}{
+			padding: 15px 15px 60px 15px;
+			width: 100%;
+		}
+		h2{
+			@media #{$mobile_big}{
+				font-size: 1.8em;
+				line-height: 1em;
+				padding: 15px 0;
+			}
+		}
 		article{
 			display: inline-block;
 			width: 360px;
+			
+			@media #{$mobile_big}{
+				width: calc(50% - 30px);
+			}
+			@media #{$mobile_mid}{
+				width: 100%;
+			}
 		}
 		form{
 			display: inline-block;
-			right: 0;
-			position: absolute;
+			float: right;
+			position: relative;
 			width: 360px;
+
+			@media #{$mobile_big}{
+				width: 50%;
+			}
+			@media #{$mobile_mid}{
+				float: none;
+				width: 100%;
+			}
 			input, textarea{
 				background: $Humo;
 				border: none;
@@ -24,6 +56,11 @@
 				margin: 10px 0;
 				padding: 8px 10px;
 				width: 300px;
+
+				@media #{$mobile_mid}{
+					font-size: 0.8em;
+					width: calc(100% - 30px);
+				}
 			}
 			textarea{
 				height: 80px;
@@ -37,6 +74,15 @@
 				position: absolute;
 				right: 40px;
 				width: auto;
+				
+				@media #{$mobile_big}{
+					position: relative;
+					right: 0;
+				}
+				@media #{$mobile_mid}{
+					position: absolute;
+					right: 15px;
+				}
 			}
 		}
 	}

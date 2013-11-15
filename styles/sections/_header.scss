@@ -15,7 +15,24 @@ header{
 		display: block;
 		height: 100%;
 		margin: 0 auto;
+		transition: all 200ms;
 		width: 400px;
+		&.visible{
+			background: #222;
+			border-top: 1px solid #333;
+			display: block;
+			height: auto;
+			position: absolute;
+			top: 40px;
+			width: 100%;
+		}
+		@media #{$mobile_big}{
+			position: absolute;
+			right: 0;
+		}
+		@media #{$mobile_mid}{
+			display: none;
+		}
 		ul{
 			list-style: none;
 			margin: 0;
@@ -49,6 +66,10 @@ header{
 		margin: 0;
 		padding: 0;
 		position: absolute;
+
+		@media #{$mobile_mid}{
+			left: 15px;
+		}
 		h2{
 			border: 0;
 			color: $Humo;
@@ -58,6 +79,25 @@ header{
 			line-height: 40px;
 			position: relative;
 			top: -15px;
+		}
+	}
+	#menu_mob{
+		background-image: url(../img/menu_mob.png);
+		background-image: url(../img/menu_mob.svg), url(../img/menu_mob.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		display: none;
+		height: 30px;
+		position: absolute;
+		right: 15px;
+		top: 5px;
+		width: 30px;
+		&:hover{
+			cursor: pointer;
+		}
+
+		@media #{$mobile_mid}{
+			display: inline-block;
 		}
 	}
 }

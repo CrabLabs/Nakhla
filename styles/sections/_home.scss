@@ -1,4 +1,5 @@
 #home{
+	background-position: center;
 	background-size: cover;
 	h1{
 		background-image: url(../img/logo.png);
@@ -17,6 +18,12 @@
 		//     -ms-transition: all 200ms;
 		//      -o-transition: all 200ms;
 		     	transition: all 200ms;
+
+		@media #{$mobile_mid}{
+			height: 100px;
+			left: 15px;
+			width: 70px;
+		}
 		&.hide{
 			// -webkit-transform: scale(0.5);
 			//    -moz-transform: scale(0.5);

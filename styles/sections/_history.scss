@@ -4,18 +4,35 @@
 	display: block;
 	height: 100%;
 	width: 100%;
+
+	@media #{$mobile_big}{
+		height: auto;
+	}
 	#cont-history{
 		display: block;
 		height: calc(100% - 200px);
 		padding: 100px;
 		position: relative;
+		
+		@media #{$mobile_big}{
+			height: auto;
+			padding: 20px;
+		}
+		@media #{$mobile_mid}{
+			height: auto;
+			padding: 20px 15px;
+		}
 		h3{
+			@media #{$mobile_big}{
+				font-size: 1.8em;
+				line-height: 1em;
+			}
 			span{
 				font-size: 1.5em;
 				font-weight: $light;
 			}
 		}
-		a{
+		.button{
 			background: $Azul;
 			border-radius: 5px;
 			bottom: 100px;
@@ -23,14 +40,44 @@
 			padding: 10px 15px;
 			position: absolute;
 			text-decoration: none;
+
+			@media #{$mobile_big}{
+				bottom: auto;
+				display: none;
+				top: 175px;
+			}
 			&:hover{
 				box-shadow: 0 1px 5px #e0e0e0;
+				cursor: pointer;
+			}
+			&#btn-history{
+				display: none;
+
+				@media #{$mobile_big}{
+					display: block;
+				}
 			}
 		}
 		img{
 			bottom: 100px;
 			position: absolute;
 			right: 100px;
+
+			@media #{$mobile_big}{
+				display: none;
+			}
+		}
+		.txt-history{
+			display: none;
+			margin: 100px 0;
+			max-width: 760px;
+			h3{
+				color: $Azul;
+				font-size: 1.2em;
+			}
+			&.visible{
+				display: block;
+			}
 		}
 	}
 }

@@ -8,23 +8,17 @@
 		$("#home").css("background-image", "url(" + bgImgs[Math.floor(Math.random() * bgImgs.length)] + ")");
 	});
 
-	//$(document, window).on("ready resize", function () {
-	//	windowHeight = $(window).height();
-	//	$(".step").height(windowHeight);
-	//	$(".horizontal_steps").height($(window).width() * 6);
-	//});
-
 	$(document).on("scroll", function (event) {
 		var scrollTop = $(document).scrollTop(),
 			scrollMod = scrollTop / ($(document).height() - 40) * 4;
 
-		// $(".nav ul li").each(function (index) {
-		// 	if (index === Math.floor(scrollMod)) {
-		// 		$(this).addClass("active");
-		// 	} else {
-		// 		$(this).removeClass("active");
-		// 	}
-		// });
+		$(".nav ul li").each(function (index) {
+			if (index === Math.floor(scrollMod)) {
+				$(this).addClass("active");
+			} else {
+				$(this).removeClass("active");
+			}
+		});
 
 		if (scrollTop > 300) {
 			$("#logo").addClass("hide");
@@ -32,26 +26,15 @@
 			$("#logo").removeClass("hide");
 		}
 
-		//if (scrollTop > windowHeight * 4 && scrollTop < windowHeight * 4 + $(window).width() * 5) {
-		//	$(".horizontal_steps .horizontal_placeholder").css({
-		//		"left": "-" + (scrollTop - windowHeight * 4) + "px",
-		//		"position": "fixed",
-		//		"top": "40px"
-		//	});
-		//} else {
-		//	if (scrollTop > windowHeight * 4) {
-		//		$(".horizontal_steps .horizontal_placeholder").css({
-		//			"bottom": "0px",
-		//			"left": "auto",
-		//			"right": $(window).width() * 4 + "px",
-		//			"position": "absolute",
-		//			"top": "auto"
-		//		});
-		//	} else {
-		//		$(".horizontal_steps .horizontal_placeholder").css("position", "static");	
-		//	}
-		//}
+	});
 
+	$("#menu_mob").on("click", function (e) {
+		e.preventDefault();
+		$('.nav').toggleClass('visible');
+	});
+	$("#btn-history").on("click", function (e) {
+		e.preventDefault();
+		$('.txt-history').toggleClass('visible');
 	});
 
 	$("a[href*=#]").on("click", function (e) {
@@ -64,7 +47,7 @@
 				targetOffset = $target.offset().top;
 				$("html, body").animate({
 					scrollTop: targetOffset
-				}, 500);
+				}, 400);
 
 				// return false;
 			}

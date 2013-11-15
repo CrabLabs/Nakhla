@@ -4,6 +4,21 @@
 		margin: 0 auto;
 		padding: 20px;
 		width: 760px;
+
+		@media #{$mobile_big}{
+			width: 600px;
+		}
+		@media #{$mobile_mid}{
+			padding: 15px;
+			width: 100%;
+		}
+		h2{
+			@media #{$mobile_big}{
+				font-size: 1.8em;
+				line-height: 1em;
+				padding: 15px 0;
+			}
+		}
 		p{
 			position: relative;
 			width: 100%;
@@ -11,6 +26,13 @@
 				display: block;
 				font-size: 1em;
 				width: 540px;
+				
+				@media #{$mobile_big}{
+					width: calc(100% - 230px);
+				}
+				@media #{$mobile_mid}{
+					width: 100%;
+				}
 			}
 			img{
 				display: block;
@@ -18,6 +40,16 @@
 				position: absolute;
 				right: 0;
 				width: 200px;
+				
+				@media #{$mobile_big}{
+					margin-top: 20px;
+					right: 20px;
+				}
+				@media #{$mobile_mid}{
+					margin: 15px 0;
+					position: relative;
+					left: calc(50% - 100px);
+				}
 			}
 		}
 	}
