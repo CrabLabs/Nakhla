@@ -10,7 +10,7 @@
 
 	$(document).on("scroll", function (event) {
 		var scrollTop = $(document).scrollTop(),
-			scrollMod = scrollTop / ($(document).height() - 40) * 4;
+			scrollMod = scrollTop / ($(document).height() - 140) * 4;
 
 		$(".nav ul li").each(function (index) {
 			if (index === Math.floor(scrollMod)) {
