@@ -1,6 +1,7 @@
 #home{
 	background-position: center;
 	background-size: cover;
+	position: relative;
 	h1{
 		background-image: url(../img/logo.png);
 		background-image: url(../img/logo.svg), url(../img/logo.png);
@@ -31,6 +32,35 @@
 			//      -o-transform: scale(0.5);
 			     	transform: scale(0.5);
 			opacity: 0;
+		}
+	}
+	h2{
+		border: none;
+		bottom: 100px;
+		color: $Blanco;
+		font-size: 2em;
+		font-style: italic;
+		left: 70px;
+		line-height: 0.8em;
+		position: absolute;
+		text-align: left;
+		text-shadow: 0 0 10px #000;
+
+		@media #{$mobile_big}{
+			bottom: 80px;
+			font-size: 1.4em;
+		}
+		@media #{$mobile_mid}{
+			display: none;
+		}
+		b{
+			font-weight: $regular;
+		}
+		span{
+			color: $Blanco;
+			font-size: 1.4em;
+			font-weight: $light;
+			line-height: 0.8em;
 		}
 	}
 }
