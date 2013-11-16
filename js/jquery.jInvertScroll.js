@@ -78,7 +78,7 @@
         }
         
         // Set the body to the selected height
-        $('body').css('height', config.height+'px');
+        $('body').css('height', config.height + 'px');
         
         $([document, window]).on('ready resize', function (e) {
             totalHeight = $(document).height();
