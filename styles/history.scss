@@ -66,7 +66,8 @@ body{
 				max-height: 60%;
 				position: absolute;
 				&#obj_01{
-
+					max-height: 70%;
+					right: 200px;
 				}
 				&#obj_02{
 					right: 200px;
@@ -78,16 +79,18 @@ body{
 					
 				}
 				&#obj_05{
-					
+					right: 100px;
 				}
 				&#obj_06{
-					
+					max-height: auto;
+					max-width: 80%;
 				}
 				&#obj_07{
-					
+					max-height: 40%;
+					right: 200px;
 				}
 				&#obj_08{
-					
+					left: 40%;
 				}
 			}
 		}
