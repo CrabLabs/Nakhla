@@ -43,6 +43,7 @@ body{
 			vertical-align: top;
 			width: calc(100% / 8);
 			div{
+				max-width: 45%;
 				&.ll{
 					bottom: 100px;
 					left: 100px;
@@ -53,13 +54,12 @@ body{
 					right: 100px;
 					top: 100px;
 				}
-			}
-			h3{
-				color: $Azul;
-				max-width: 45%;
-			}
-			p{
-				max-width: 45%;
+				h3{
+					color: $Azul;
+				}
+				p{
+					
+				}
 			}
 			img{
 				bottom: 100px;
@@ -76,7 +76,7 @@ body{
 					max-height: 30%;
 				}
 				&#obj_04{
-					
+					max-height: 40%;
 				}
 				&#obj_05{
 					right: 100px;
