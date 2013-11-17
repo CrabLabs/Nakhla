@@ -25,7 +25,7 @@
 		} else {
 			$("#logo").removeClass("hide");
 		}
-
+		$('#home').css('background-position-y', scrollTop / 2);
 	});
 
 	$("#menu_mob").on("click", function (e) {
