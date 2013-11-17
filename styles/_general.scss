@@ -1,4 +1,4 @@
-p, a, li, span, h1, h2, h3, h4, h5, h6, input, textarea{
+p, a, li, span, h1, h2, h3, h4, h5, h6, input, textarea, select{
 	color: $Gris;
 	font-family: $open;
 }
@@ -20,4 +20,4 @@ h4{font-size: 2em;line-height:2.2em;}
 h5{font-size: 1.5em;line-height:2em;}
 h6{font-size: 1.2em;font-style: italic;line-height:1.8em;}
 
-input:focus, textarea:focus {outline: 1px solid #e0e0e0;}
+input:focus, textarea:focus, select:focus {outline: 1px solid #e0e0e0;}
