@@ -61,12 +61,13 @@ body{
 					
 				}
 			}
-			img{
+			svg{
 				bottom: 100px;
-				max-height: 60%;
+				height: 60%;
 				position: absolute;
+				width: 50%;
 				&#obj_01{
-					max-height: 70%;
+					height: 70%;
 					right: 200px;
 				}
 				&#obj_02{

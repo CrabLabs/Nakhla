@@ -1,16 +1,25 @@
 (function($) {
     "use strict";
 
-    var s = Snap("#nav"), selectClass, position, totalWidth;
+    var s = Snap("#nav"), 
+        selectClass, 
+        scrollTop,
+        position, 
+        eq;
 
-    $([document, window]).on("ready, resize", function () {
-        // 8 = Number of sections
-        totalWidth = $("#step_1").width() * 8;
+    $(document).on("ready", function () {
+        $(".snap-autoload").each(function () {
+            var $self = $(this);
+            Snap.load($self.data("src"), function (f) {
+                window.f = f;
+                Snap("#" + $self.attr("id")).append(f);
+            });
+        });
     });
 
     $("circle").on("click", function (e) {
-        var eq = Math.floor($(this).index() / 2);
-        var scrollTop = $("section").eq(eq).position().left + (200 * eq);
+        eq = Math.floor($(this).index() / 2);
+        scrollTop = $("section").eq(eq).position().left + (200 * eq);
         $(document).scrollTop(scrollTop);
     });
 
@@ -25,8 +34,8 @@
                 fill: "#666666",
                 opacity: 0.5
             });
-            s.selectAll('.' + selectClass).attr({
-                fill: '#006EBE',
+            s.selectAll("." + selectClass).attr({
+                fill: "#006EBE",
                 opacity: 1
             });
         }
