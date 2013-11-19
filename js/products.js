@@ -5,7 +5,7 @@
 
 	$(document).on("scroll", function (event) {
 		var scrollTop = $(document).scrollTop(),
-			scrollMod = scrollTop / ($(document).height() - 40) * 6;
+			scrollMod = scrollTop / ($(document).height()) * 6;
 
 		$(".category ul li").each(function (index) {
 			if (index === Math.floor(scrollMod)) {
@@ -19,10 +19,6 @@
 	$("#menu_mob").on("click", function (e) {
 		e.preventDefault();
 		$('.nav').toggleClass('visible');
-	});
-	$("#btn-history").on("click", function (e) {
-		e.preventDefault();
-		$('.txt-history').toggleClass('visible');
 	});
 
 	$("a[href*=#]").on("click", function (e) {
