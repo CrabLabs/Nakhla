@@ -20,7 +20,9 @@
     $("circle").on("click", function (e) {
         eq = Math.floor($(this).index() / 2);
         scrollTop = $("section").eq(eq).position().left + (200 * eq);
-        $(document).scrollTop(scrollTop);
+        $("html, body").animate({
+            scrollTop: scrollTop
+        }, 400);
     });
 
 

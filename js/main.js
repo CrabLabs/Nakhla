@@ -49,7 +49,7 @@
 					scrollTop: targetOffset
 				}, 400);
 
-				// return false;
+				return false;
 			}
 		}
 	});
