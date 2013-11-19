@@ -5,7 +5,7 @@
 
 	$(document).on("scroll", function (event) {
 		var scrollTop = $(document).scrollTop(),
-			scrollMod = scrollTop / ($(document).height()) * 6;
+			scrollMod = scrollTop / ($(document).height() - 40) * 6;
 
 		$(".category ul li").each(function (index) {
 			if (index === Math.floor(scrollMod)) {
