@@ -20,12 +20,26 @@ body{
 		aside{
 			position: fixed;
 			ul{
+				padding-left: 10px;
 				li{
 					list-style: none;
 					&:hover, &.active{
+						span{
+							left: 0;
+							opacity: 1;
+						}
 						a{
 							color: $Oscuro;
 						}
+					}
+					span{
+						font-size: 1em;
+						left: -10px;
+						line-height: 1.8em;
+						margin-right: 10px;
+						opacity: 0;
+						position: relative;
+						transition: all 200ms;
 					}
 					a{
 						color: #999;
