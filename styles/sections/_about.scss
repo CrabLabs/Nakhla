@@ -10,7 +10,7 @@
 		}
 		@media #{$mobile_mid}{
 			padding: 15px;
-			width: 100%;
+			width: calc(100% - 30px);
 		}
 		h2{
 			@media #{$mobile_big}{

@@ -19,14 +19,26 @@ body{
 		min-height: 100%;
 		aside{
 			position: fixed;
+			z-index: 999;
+			@media #{$mobile_mid}{
+				background: $Humo;
+				top: 40px;
+			}
 			ul{
 				padding-left: 10px;
 				li{
 					list-style: none;
+					@media #{$mobile_mid}{
+						display: inline-block;
+						width: calc(50% - 10px);
+					}
 					&:hover, &.active{
 						span{
 							left: 0;
 							opacity: 1;
+							@media #{$mobile_mid}{
+								opacity: 0;
+							}
 						}
 						a{
 							color: $Oscuro;
@@ -47,6 +59,9 @@ body{
 						line-height: 1.8em;
 						text-decoration: none;
 						transition: all 200ms;
+						@media #{$mobile_mid}{
+							font-size: 1em;
+						}
 					}
 				}
 			}
@@ -58,9 +73,18 @@ body{
 			padding-bottom: 100px;
 			position: relative;
 			width: calc(100% - 400px);
+			@media #{$mobile_mid}{
+				padding-bottom: -50px;
+				width: calc(100% - 30px);
+			}
 			h3{
 				line-height: 50px;
 				padding-top: 100px;
+				@media #{$mobile_mid}{
+					font-size: 1.5em;
+					line-height: 40px;
+					padding-top: 150px;
+				}
 				span{
 					font-size: 0.8em;
 					font-style: italic;
@@ -72,6 +96,9 @@ body{
 				padding-bottom: 20px;
 			}
 			ul{
+				@media #{$mobile_mid}{
+					width: calc(100% - 30px);
+				}
 				li{
 					/*background: $Gris;*/
 					border-radius: 50%;
@@ -82,6 +109,11 @@ body{
 					position: relative;
 					transition: all 200ms;
 					width: 160px;
+					@media #{$mobile_mid}{
+						height: 220px;
+						margin: 0 auto;
+						text-align: center;
+					}
 					&:hover{
 						cursor: pointer;
 						span{
@@ -95,6 +127,14 @@ body{
 							     -o-filter: blur(2px);
 							     	filter: blur(2px);
 							opacity: 0.25;
+							@media #{$mobile_mid}{
+								-webkit-filter: none;
+								   -moz-filter: none;
+								    -ms-filter: none;
+								     -o-filter: none;
+								     	filter: none;
+								opacity: 1;
+							}
 						}
 					}
 					span{
@@ -107,6 +147,14 @@ body{
 						text-align: center;
 						transition: all 200ms;
 						width: 160px;
+						@media #{$mobile_mid}{
+							border-bottom: 1px solid $Humo;
+							bottom: auto;
+							opacity: 1;
+							padding-bottom: 10px;
+							position: relative;
+							top: 170px;
+						}
 					}
 					img{
 						left: 0;

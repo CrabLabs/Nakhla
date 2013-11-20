@@ -31,7 +31,7 @@
 				width: calc(50% - 30px);
 			}
 			@media #{$mobile_mid}{
-				width: 100%;
+				width: calc(100% - 30px);
 			}
 		}
 		form{
@@ -45,7 +45,7 @@
 			}
 			@media #{$mobile_mid}{
 				float: none;
-				width: 100%;
+				width: calc(100% - 30px);
 			}
 			input, textarea{
 				background: $Humo;
