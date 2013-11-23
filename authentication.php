@@ -1,3 +1,31 @@
+<?php
+	@session_start();
+
+	function doAuth ($val) {
+		$_SESSION["auth"] = $val;
+		header("Location: index.html");
+	}
+
+	if (! $_SESSION["auth"]) {
+		$errorMsg = "Te agradecemos haberte comunicado con nosotros; lamentablemente estamos impedidos de darte";
+		$errorMsg.= "acceso. De acuerdo a la legislación vigente, la comunicación de cigarrillos debe estar";
+		$errorMsg.= "estrictamente dirigida a mayores de 18 años. Esperamos sepas entendernos.";
+		exit($errorMsg);
+	} elseif ($_SESSION["auth"]) {
+		exit("true");
+	} else {
+		if (isset($_POST["submit"], $_POST["year"], $_POST["month"], $_POST["day"])) {
+			if ($_POST["year"] == "prev_1980")
+				doAuth(true);
+			$day 	= int trim($_POST["day"]);
+			$year  	= int trim($_POST["year"]);
+			$month 	= int trim($_POST["month"]);
+			
+			$date   = new DateTime("$year-$month-$day")
+			doAuth($date > date("Y-m-d", strtotime("18 years ago")))
+		}
+	}
+?>
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -71,56 +99,43 @@
 				</select>
 				<h3>año </h3>
 				<select name="year" id="year">
-					<option value="1">2013</option>
-					<option value="2">2012</option>
-					<option value="3">2011</option>
-					<option value="4">2010</option>
-					<option value="5">2009</option>
-					<option value="6">2008</option>
-					<option value="7">2007</option>
-					<option value="8">2006</option>
-					<option value="9">2005</option>
-					<option value="10">2004</option>
-					<option value="11">2003</option>
-					<option value="12">2002</option>
-					<option value="13">2001</option>
-					<option value="14">2000</option>
-					<option value="15">1999</option>
-					<option value="16">1998</option>
-					<option value="17">1997</option>
-					<option value="18">1996</option>
-					<option value="19">1995</option>
-					<option value="20">1994</option>
-					<option value="21">1993</option>
-					<option value="22">1992</option>
-					<option value="23">1991</option>
-					<option value="24">1990</option>
-					<option value="25">1989</option>
-					<option value="26">1988</option>
-					<option value="27">1987</option>
-					<option value="28">1986</option>
-					<option value="29">1985</option>
-					<option value="30">1984</option>
-					<option value="31">1983</option>
-					<option value="32">1982</option>
-					<option value="33">1981</option>
-					<option value="34">1980</option>
-					<option value="35">Anterior a 1980</option>
+					<option>2013</option>
+					<option>2012</option>
+					<option>2011</option>
+					<option>2010</option>
+					<option>2009</option>
+					<option>2008</option>
+					<option>2007</option>
+					<option>2006</option>
+					<option>2005</option>
+					<option>2004</option>
+					<option>2003</option>
+					<option>2002</option>
+					<option>2001</option>
+					<option>2000</option>
+					<option>1999</option>
+					<option>1998</option>
+					<option>1997</option>
+					<option>1996</option>
+					<option>1995</option>
+					<option>1994</option>
+					<option>1993</option>
+					<option>1992</option>
+					<option>1991</option>
+					<option>1990</option>
+					<option>1989</option>
+					<option>1988</option>
+					<option>1987</option>
+					<option>1986</option>
+					<option>1985</option>
+					<option>1984</option>
+					<option>1983</option>
+					<option>1982</option>
+					<option>1981</option>
+					<option>1980</option>
+					<option value="prev_1980">Anterior a 1980</option>
 				</select>
-				<input type="submit" name="submit" value="Entrar" >
-				<?php
-				if (isset($_POST['submit']))
-				{
-				$year = $_POST['year'];
-				$month = $_POST['month'];
-				$day = $_POST['day'];
-				if ($year != '' && $month != '' && $day != '') {
-				$birthDate = $year.'-'.$month.'-'.$day;
-
-				$time = strtotime($birthDate);
-
-				$birthDate= date('Y-m-d',$time);
-				?>
+				<input type="submit" name="submit" value="Entrar">
 			</form>
 			<!--ATENCIÓN
 			Te agradecemos haberte comunicado con nosotros; lamentablemente estamos impedidos de darte acceso. De acuerdo a la legislación vigente, la comunicación de cigarrillos debe estar estrictamente dirigida a mayores de 18 años. Esperamos sepas entendernos.-->
