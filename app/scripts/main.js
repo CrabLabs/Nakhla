@@ -4,7 +4,7 @@
 	var bgImgs;
 
 	$(document).on('ready', function () {
-		bgImgs = ['img/bg/02.jpg'];
+		bgImgs = ['images/bg/02.jpg'];
 		$('#home').css('background-image', 'url(' + bgImgs[Math.floor(Math.random() * bgImgs.length)] + ')');
 	});
 
