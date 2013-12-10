@@ -1,6 +1,5 @@
-.sass-cache/
+node_modules
+dist
 .tmp
-bower_components/
-components/
-node_modules/
-.tmp/styles/main.css
+.sass-cache
+app/bower_components
