@@ -1,3 +1,2 @@
-js/snap.svg.js
-js/jquery-1.10.2.min.js
-js/jquery.jInvertScroll.js
+app/scripts/snap.svg.js
+app/scripts/jquery.jInvertScroll.js
