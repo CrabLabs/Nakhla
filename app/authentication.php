@@ -41,7 +41,9 @@
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/auth.css">
         <!-- endbuild -->
+        <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
 
     </head>
 	<body>
