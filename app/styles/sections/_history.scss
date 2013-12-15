@@ -11,7 +11,9 @@
 	#cont-history{
 		display: block;
 		height: calc(100% - 200px);
-		padding: 100px;
+		left: calc(50% - 480px);
+		width: 960px;
+		padding: 100px 0;
 		position: relative;
 		
 		@media #{$mobile_big}{
@@ -35,16 +37,15 @@
 		.button{
 			background: $Azul;
 			border-radius: 5px;
-			bottom: 100px;
 			color: $Blanco;
 			padding: 10px 15px;
-			position: absolute;
 			text-decoration: none;
 
 			@media #{$mobile_big}{
 				bottom: auto;
 				display: none;
 				top: 175px;
+				width: calc(100% - 100px);
 			}
 			&:hover{
 				box-shadow: 0 1px 5px #e0e0e0;
@@ -62,7 +63,7 @@
 			bottom: 100px;
 			max-height: 70%;
 			position: absolute;
-			right: 100px;
+			right: 0;
 
 			@media #{$mobile_big}{
 				display: none;

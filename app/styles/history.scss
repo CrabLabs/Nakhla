@@ -27,7 +27,7 @@ body{
 		background: url(../images/history/bg_1.svg);
 		background-size: cover;
 		height: 100%;
-		width: 900%;
+		width: 600%;
 		z-index: 50;
 	}
 
@@ -38,16 +38,20 @@ body{
 		section{
 			display: inline-block;
 			height: 100%;
-			padding: 100px;
 			position: relative;
 			vertical-align: top;
 			width: calc(100% / 8);
 			div{
-				max-width: 45%;
+				max-width: 650px;
 				&.ll{
 					bottom: 100px;
 					left: 100px;
 					position: absolute;
+				}
+				&.ul{
+					position: absolute;
+					left: 100px;
+					top: 100px;
 				}
 				&.ur{
 					position: absolute;
@@ -56,42 +60,47 @@ body{
 				}
 				h3{
 					color: $Azul;
+					line-height: 1.2em;
 				}
 				p{
 					
 				}
 			}
-			svg{
-				bottom: 100px;
-				height: 60%;
+			img{
 				position: absolute;
-				width: 50%;
-				&#obj_01{
-					height: 70%;
-					right: 200px;
-				}
 				&#obj_02{
-					right: 200px;
+					right: 100px;
+					top: 100px;
 				}
 				&#obj_03{
-					max-height: 30%;
+					bottom: 100px;
+					left: 100px;
 				}
-				&#obj_04{
-					max-height: 40%;
+				&#obj_04, &#obj_06{
+					left: calc(50% - 250px);
+					top: calc(50% - 250px);
 				}
 				&#obj_05{
 					right: 100px;
+					top: 100px;
+					@media #{"only screen and (max-width: 1280px)"}{
+						max-height: 250px;
+						max-width: 250px;
+					}
 				}
-				&#obj_06{
-					max-height: auto;
-					max-width: 80%;
+			}
+			svg{
+				bottom: 100px;
+				position: absolute;
+				right: 0;
+				&#obj_01{
+					max-height: 70%;
 				}
 				&#obj_07{
-					max-height: 40%;
-					right: 200px;
+					max-height: 30%;
 				}
 				&#obj_08{
-					left: 40%;
+					max-height: 50%;
 				}
 			}
 		}
