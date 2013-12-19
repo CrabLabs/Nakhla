@@ -17,7 +17,7 @@ body{
 	section{
 		display: block;
 		min-height: 100%;
-		aside{
+		.category{
 			position: fixed;
 			z-index: 999;
 			@media #{$mobile_mid}{
