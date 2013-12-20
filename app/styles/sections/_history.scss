@@ -18,16 +18,19 @@
 		
 		@media #{$mobile_big}{
 			height: auto;
+			left: auto;
 			padding: 20px;
 		}
 		@media #{$mobile_mid}{
 			height: auto;
 			padding: 20px 15px;
+			width: calc(100% - 30px);
 		}
 		h3{
 			@media #{$mobile_big}{
 				font-size: 1.8em;
 				line-height: 1em;
+				width: 100%;
 			}
 			span{
 				font-size: 1.5em;
@@ -56,6 +59,8 @@
 
 				@media #{$mobile_big}{
 					display: block;
+					text-align: center;
+					width: 60px;
 				}
 			}
 		}
